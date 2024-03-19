@@ -23,6 +23,7 @@ ul {
 
 :root {
   --menu-color: #D2691E;
+  --background-color: #F0EAD6;
 }
 
 @font-face {
@@ -63,7 +64,7 @@ ul {
 }
 
 header {
-  display: none;
+  /* display: none; */
 }
 
 .header__wrapper {
@@ -157,7 +158,12 @@ header {
   text-align: center;
 }
 
-
+.events__background {
+  background-color: #F0EAD6;
+}
+.events__wrapper {
+  padding: 60px 105px;
+}
 
 
 
@@ -171,6 +177,7 @@ header {
 
   .header__menu {
     display: none;
+  
   }
 
   .header__phone {
