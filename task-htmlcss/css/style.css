@@ -66,6 +66,9 @@ ul {
 header {
   /* display: none; */
 }
+/* .hero {
+  display: none;
+}; */
 
 .header__wrapper {
   background-color: var(--menu-color);
@@ -80,9 +83,11 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  padding: 40px 75px 27px;
+  padding: 40px 75px 30px;
 }
-
+.header__logo {
+  font-size: 0;
+}
 .header__menu {
   /* flex-shrink: 1; */
   flex-grow: 1;
@@ -94,8 +99,9 @@ header {
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 20px;
-  font-size: 16px;
   padding: 12px 30px 10px;
+  font-size: 16px;
+  line-height: 21px;
 
 }
 
@@ -106,7 +112,7 @@ header {
   /* flex-shrink: 0; */
   max-width: 275px;
   text-align: right;
-  padding-top: 2px;
+  padding-top: 1px;
   line-height: 26px;
 
 }
@@ -164,10 +170,78 @@ header {
 .events__wrapper {
   padding: 60px 105px;
 }
+.events__title {
+  font-family: 'Playfair', serif;
+  font-size: 35;
+  font-weight: 800;
+  line-height: 42px;
+  color: #513833;
+  margin-bottom: 50px;
+}
+.card-list {
+  display: flex;
+  column-gap: 30px;
+  margin-bottom: 50px;
+}
+.card-item {
+  position: relative;
+  /* height: 390px; */
+  font-size: 12px;
+  line-height: 0;
+}
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  line-height: 1;
+  
 
+  /* bottom: 20px; */
 
+}
+.card-btn {
+  display: inline-block;
+    padding: 10px 23px;
+    background-color: #D2691E;
+    border-radius: 5px;
+    /* width: 110px; */
+    text-align: center;
+    /* font-size: 12px; */
+}
+.card__content-info-text {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  /* font-size: 12px; */
+  margin-bottom: 20px;
+}
+.card__title {
+  font-family: "Playfair", serif;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 35px;
 
+}
+.rate-inner__name {
+  margin-bottom: 5px;
+}
+.rate-list {
+  display: flex;
+  margin-left: -1px;
+}
+.rate-list-item {
+  /* background: url('./../img/icon-rate\ star.svg') no-repeat; */
 
+}
+.rate-list-item.full svg{
+  fill: #FFFFFF;
+}
 
 
 @media (max-width:768px) {
@@ -181,8 +255,9 @@ header {
   }
 
   .header__phone {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 16px;
+    line-height: 19px;
     flex-grow: 1;
     max-width: unset;
   }
@@ -218,14 +293,17 @@ header {
   }
 
   .header__logo-pict {
+    object-fit: cover;
+    object-position: left;
+    width: 130px;
     height: 30px;
   }
 
   .header__phone {
+    text-transform: uppercase;
     font-size: 12px;
     line-height: 18px;
     padding-top: 0px;
-    line-height: 20px;
 
     /* font-weight: bold; */
   }
