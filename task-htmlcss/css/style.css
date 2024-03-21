@@ -172,7 +172,7 @@ header {
 }
 .events__title {
   font-family: 'Playfair', serif;
-  font-size: 35;
+  font-size: 35px;
   font-weight: 800;
   line-height: 42px;
   color: #513833;
@@ -235,10 +235,10 @@ header {
   display: flex;
   margin-left: -1px;
 }
-.rate-list-item {
-  /* background: url('./../img/icon-rate\ star.svg') no-repeat; */
+/*.rate-list-item {
+  background: url('./../img/icon-rate\ star.svg') no-repeat;
 
-}
+}*/
 .rate-list-item.full svg{
   fill: #FFFFFF;
 }
