@@ -33,19 +33,24 @@
     tab.addEventListener('click', tabEvent);
   });
 
-  let activeTab = [];
-
+  const activeTab = [];
+  let limit;
+  if (!settings.tabsLimit) {
+    limit = tabs.length;
+  }
+  else {
+    limit = settings.tabsLimit;
+  }
   function tabEvent(e) {
-    if (settings.tabsLimit > 0) {
+    if (limit > 0) {
       addActiveTab(e.target);
     }
+   
   }
-
-  
   function addActiveTab(item) {
     let indexIfPresent = activeTab.indexOf(item);
     if (indexIfPresent === -1) {
-      if (activeTab.length >= settings.tabsLimit) {
+      if (activeTab.length >= limit) {
         let removeTab = activeTab.shift();
         removeTab.closest('.accordeon-item').classList.remove('accordeon-item--open')
       }
